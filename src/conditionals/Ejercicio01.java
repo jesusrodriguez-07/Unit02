@@ -17,8 +17,8 @@ public class Ejercicio01 {
 		num = sc.nextInt();
 		// hacemos que si no esta entre esos valores se acabe la ejecución del programa
 		if (num < 0 || num > 9999) {
-			System.out.println("Error, el número introducido es inválido"); // Ahora sacamos los valores de cada
-																			// posicion del número
+			System.out.println("Error, el número introducido es inválido");
+			// Ahora sacamos los valores de cada posicion del número
 		} else {
 			// Guardamos en cada variable el valor de el dígito de cada posición
 			int unidades = num % 10;
