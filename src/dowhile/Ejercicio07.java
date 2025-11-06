@@ -6,12 +6,15 @@ public class Ejercicio07 {
 
 	public static void main(String[] args) {
 
+		// Creamos el scanner
 		Scanner sc = new Scanner(System.in);
 
+		// Declaramos las variables de la tirada 1 y la tirada 2
 		String tirada1, tirada2;
 
 		int num1 = 0, num2 = 0;
 
+		// Variable booleana para saber si es valido
 		boolean valido;
 
 		// PRIMERA TIRADA
@@ -27,6 +30,7 @@ public class Ejercicio07 {
 
 			switch (tirada1) {
 
+			// Pedimos la primera tirada que ponga el numero del valor del uno al seis
 			case "UNO":
 
 				num1 = 1;
@@ -65,6 +69,8 @@ public class Ejercicio07 {
 
 			default:
 
+				// Si el valor no esta entre los posibles se escribe eso y guardamos false en la
+				// variable valido
 				System.out.println("Valor no válido, vuelve a intentarlo.");
 
 				valido = false;
@@ -73,6 +79,8 @@ public class Ejercicio07 {
 
 			}
 
+			// Mientras no sea true es decir no valido se seguira pidiendo el valor de la
+			// tirada
 		} while (!valido);
 
 		// SEGUNDA TIRADA
@@ -126,6 +134,7 @@ public class Ejercicio07 {
 
 			default:
 
+				// Lo mismo que en la tirada anterior
 				System.out.println("Valor no válido, vuelve a intentarlo.");
 
 				valido = false;
@@ -136,6 +145,7 @@ public class Ejercicio07 {
 
 		} while (!valido);
 
+		// Una vez todo correcto se suman las variables y se muestra el valor total
 		int total = num1 + num2;
 
 		System.out.println("Este es el total de valores de los dados: " + total);

@@ -6,10 +6,13 @@ public class Ejercicio06 {
 
 	public static void main(String[] args) {
 
+		// Creamos el scanner
 		Scanner sc = new Scanner(System.in);
 
+		// Declaramos las variables para los dos numeros de la operacion
 		int num1, num2;
 
+		// Variable para guardar el resultado y otra para la opcion de la calculadora
 		double resultado;
 
 		String opcion;
@@ -32,6 +35,7 @@ public class Ejercicio06 {
 
 			opcion = sc.next().toUpperCase();
 
+			// Hacemos que si no sea igual a e pida dos numeros
 			if (!opcion.equals("E")) {
 
 				System.out.print("Introduce el primer número: ");
@@ -56,6 +60,7 @@ public class Ejercicio06 {
 
 			case "A":
 
+				// Suma
 				resultado = num1 + num2;
 
 				System.out.println("Resultado: " + resultado);
@@ -64,6 +69,7 @@ public class Ejercicio06 {
 
 			case "B":
 
+				// Resta
 				resultado = num1 - num2;
 
 				System.out.println("Resultado: " + resultado);
@@ -72,6 +78,7 @@ public class Ejercicio06 {
 
 			case "C":
 
+				// Multiplicación
 				resultado = num1 * num2;
 
 				System.out.println("Resultado: " + resultado);
@@ -80,6 +87,8 @@ public class Ejercicio06 {
 
 			case "D":
 
+				// Division pero que si num2 es igual a 0 ponemos que no se puede dividir entre
+				// 0
 				if (num2 == 0) {
 
 					System.out.println("Error: no se puede dividir entre 0");
@@ -108,6 +117,7 @@ public class Ejercicio06 {
 
 			}
 
+			// Mientras no sea igual a e pues volveremos al principio de la calculadora
 		} while (!opcion.equals("E"));
 
 		sc.close();
